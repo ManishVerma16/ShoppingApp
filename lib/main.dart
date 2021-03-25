@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './screens/product_overview_screen.dart';
+import './screens/product_detail_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,12 +14,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'ShopApp',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        primaryColor: Colors.lightGreen,
-        accentColor: Colors.deepOrangeAccent,
-        fontFamily: 'Lato'
-      ),
+          primarySwatch: Colors.blue,
+          primaryColor: Colors.lightGreen,
+          accentColor: Colors.deepOrangeAccent,
+          fontFamily: 'Lato'),
       home: ProductOverviewScreen(),
+      routes: {
+        ProductDetailScreen.routeName: (ctx) => ProductDetailScreen(),
+      },
     );
   }
 }
